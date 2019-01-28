@@ -1,3 +1,7 @@
+" Needed so that backspace works properly
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -96,3 +100,7 @@ nnoremap <leader>tt :TagbarToggle<CR>
 
 " (TRIAL): Jump to definition
 map <silent> <leader>jd :CtrlPTag<cr><c-\>w
+
+" Indentation stuff
+:autocmd FileType ruby :set tabstop=2 expandtab
+:autocmd FileType python :set tabstop=2 expandtab
