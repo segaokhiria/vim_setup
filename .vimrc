@@ -102,5 +102,7 @@ nnoremap <leader>tt :TagbarToggle<CR>
 map <silent> <leader>jd :CtrlPTag<cr><c-\>w
 
 " Indentation stuff
-:autocmd FileType ruby :set tabstop=2 expandtab
-:autocmd FileType python :set tabstop=2 expandtab
+:autocmd FileType * :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
+:autocmd FileType c,cpp :set tabstop=4 noexpandtab smartindent shiftwidth=4 softtabstop=4
+:autocmd FileType ruby :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
+:autocmd FileType python :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
