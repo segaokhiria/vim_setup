@@ -98,9 +98,12 @@ nnoremap <space>n :NERDTreeToggle<CR>
 "   copy with visual selection
 :set mouse=""
 
-" Search
+" SEARCH
 :let g:ackprg = "ag --vimgrep"
-nnoremap <space>f :Ack <C-R><C-W> .<CR>
+" Search current directory for word under cursor
+nnoremap <space>f :Ack! <C-R><C-W> .<CR>
+" Close quickfix window
+nnoremap <space>ff :ccl<CR>
 
 " Gutentags cache dir
 let g:gutentags_cache_dir = "~/.vim/gutentags"
