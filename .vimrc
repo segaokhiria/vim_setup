@@ -39,6 +39,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 " Auto complete
 Plugin 'davidhalter/jedi-vim'
+" Ack/Ag
+Plugin 'mileszs/ack.vim'
 
 " COLOR SCHEMES
 
@@ -92,13 +94,21 @@ nnoremap <space>n :NERDTreeToggle<CR>
 " Always show line numbers
 :set nu
 
+" TODO(sega): Temporarily disable mouse until I figure out how to
+"   copy with visual selection
+:set mouse=""
+
+" Search
+:let g:ackprg = "ag --vimgrep"
+nnoremap <space>f :Ack <C-R><C-W> .<CR>
+
 " Gutentags cache dir
 let g:gutentags_cache_dir = "~/.vim/gutentags"
 
 " Tagbar stuff
 nnoremap <leader>tt :TagbarToggle<CR>
 
-" (TRIAL): Jump to definition
+" (TRIAL)(sega): Jump to definition
 map <silent> <leader>jd :CtrlPTag<cr><c-\>w
 
 " Indentation stuff
