@@ -91,6 +91,9 @@ nnoremap <C-p>m :CtrlPMRU<CR>
 " Toggle Nerdtree
 nnoremap <space>n :NERDTreeToggle<CR>
 
+" Hidden NERDTree files
+let NERDTreeIgnore = ['\.pyc$']
+
 " Always show line numbers
 :set nu
 
@@ -116,6 +119,7 @@ map <silent> <leader>jd :CtrlPTag<cr><c-\>w
 
 " Indentation stuff
 :autocmd FileType * :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
+:autocmd FileType go :set tabstop=4 noexpandtab smartindent shiftwidth=4 softtabstop=4
 :autocmd FileType c,cpp :set tabstop=4 noexpandtab smartindent shiftwidth=4 softtabstop=4
 :autocmd FileType ruby :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
 :autocmd FileType python :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
