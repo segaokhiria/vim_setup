@@ -80,10 +80,20 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+" python3 syntax-ing
+let g:syntastic_python_python_exec = 'python3'
+
 " ctrlp most recently used buffer
 nnoremap <C-p>b :CtrlPBuffer<CR>
 " ctrlp buffer
 nnoremap <C-p>m :CtrlPMRU<CR>
+
+" Set file format to allow unix and dos
+:set ffs=unix,dos
 
 " Highlight all search items
 :set hlsearch
@@ -119,3 +129,5 @@ map <silent> <leader>jd :CtrlPTag<cr><c-\>w
 :autocmd FileType c,cpp :set tabstop=4 noexpandtab smartindent shiftwidth=4 softtabstop=4
 :autocmd FileType ruby :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
 :autocmd FileType python :set tabstop=2 expandtab smartindent shiftwidth=2 softtabstop=2
+:autocmd FileType go :set tabstop=4 noexpandtab smartindent shiftwidth=4 softtabstop=4
+:autocmd FileType make :set noexpandtab shiftwidth=8 softtabstop=0
